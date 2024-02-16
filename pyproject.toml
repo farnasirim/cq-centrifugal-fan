@@ -3,7 +3,9 @@ name = "cq-centrifugal-fan"
 
 description = "Fully parametric centrifugal fan builder in CadQuery"
 
-dynamic = ["dependencies", "optional-dependencies", "version"]
+dynamic = ["dependencies", "optional-dependencies"]
+
+version = ["0.0.8"]
 
 readme = "README.md"
 
@@ -52,8 +54,5 @@ optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
 
 
 [build-system]
-requires = ["setuptools<=65.7.0", "wheel", "setuptools-git-versioning<2"]
+requires = ["setuptools<=65.7.0", "wheel"]
 build-backend = "setuptools.build_meta"
-
-[tool.setuptools-git-versioning]
-enabled = true
