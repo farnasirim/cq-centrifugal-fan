@@ -52,5 +52,8 @@ optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
 
 
 [build-system]
-requires = ["setuptools>=58.0.0"]
+requires = ["setuptools>=58.0.0", "wheel", "setuptools-git-versioning<2"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true

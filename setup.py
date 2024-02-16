@@ -22,5 +22,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
+    setup_requires=["setuptools-git-versioning<2"],
     python_requires='>=3.6',
 )
