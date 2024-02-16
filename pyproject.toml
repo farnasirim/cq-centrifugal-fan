@@ -1,0 +1,58 @@
+[project]
+name = "cq-centrifugal-fan"  # Required
+
+version = "0.0.1"  # Required
+
+description = "Fully parametric centrifugal fan builder in CadQuery"  # Optional
+
+dynamic = ["dependencies", "optional-dependencies"]
+
+readme = "README.md" # Optional
+
+requires-python = ">=3.7"
+
+license = {file = "LICENSE.txt"}
+
+keywords = ["cad", "cadquery"]
+
+authors = [
+  {name = "Mohammad Nasirifar", email = "farnasirim@gmail.com" }
+]
+maintainers = [
+  {name = "Mohammad Nasirifar", email = "farnasirim@gmail.com" }
+]
+
+classifiers = [  # Optional
+  "Development Status :: 3 - Alpha",
+  
+  "Intended Audience :: Developers",
+
+  "License :: OSI Approved :: MIT License",
+
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]  # Optional
+"Homepage" = "https://github.com/farnasirim/cq-centrifugal-fan"
+"Bug Reports" = "https://github.com/farnasirim/cq-centrifugal-fan/issues"
+"Funding" = "https://farnasirim.com"
+"Say Thanks!" = "https://farnasirim.com/thanks"
+"Source" = "https://github.com/farnasirim/cq-centrifugal-fan"
+
+
+[tool.setuptools]
+package-data = {"sample" = ["*.txt", "*.md"]}
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
+
+
+[build-system]
+requires = ["setuptools>=58.0.0"]
+build-backend = "setuptools.build_meta"
