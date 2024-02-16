@@ -6,13 +6,13 @@ import cqkit as ck
 try:
     import ocp_vscode
     has_ocp_vscode = True
-except Exception:
+except NameError:
     print("Failed to import ocp_vscode")
 
 try:
     import jupyter_cadquery as jq
     has_jupyter_cadquery = True
-except Exception:
+except NameError:
     print("Failed to import jupyter_cadquery")
 
 
@@ -91,12 +91,13 @@ class FallbackCompositeMonitor(Monitor):
         self.monitors = monitors
 
     def show_object(self, *args, **kwargs):
+        exceptions = []
         for monitor in self.monitors:
             try:
                 return monitor.show_object(*args, **kwargs)
-            except cf_errors.DependencyError:
-                pass
-        raise cf_errors.RuntimeError("All monitors failed to show object")
+            except cf_errors.DependencyError as ex:
+                exceptions.append(ex)
+        raise cf_errors.RuntimeError("All monitors failed to show object", exceptions=ex)
 
 
 monitor = FallbackCompositeMonitor([OcpMonitor(), JupyterMonitor(), NoOpMonitor()])

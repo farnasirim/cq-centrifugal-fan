@@ -1,11 +1,9 @@
 [project]
 name = "cq-centrifugal-fan"  # Required
 
-version = "0.0.1"  # Required
-
 description = "Fully parametric centrifugal fan builder in CadQuery"  # Optional
 
-dynamic = ["dependencies", "optional-dependencies"]
+dynamic = ["dependencies", "optional-dependencies", "version"]
 
 readme = "README.md" # Optional
 
