@@ -147,6 +147,7 @@ class FanMotorHolder(PartBuilder):
 
         # scene = scene.add(base).add(around).add(fill).add(bridge).add(parallel)
         scene = scene.union(base).union(around).union(fill).union(parallel)
+        scene.name = "fan_motor_holder"
 
         return scene
 
@@ -282,7 +283,9 @@ class FanCompartmentBuilder(PartBuilder):
         # cyl = cq.Workplane("XY").cylinder(height=self.fan_hull_length, radius=self.fan_hull_radius)
         # cyl = cyl.faces(">Z").workplane().hole(diameter=(self.fan_hull_radius - self.thickness) * 2)
         # return result
-        return self.build_with_sketch()
+        result = self.build_with_sketch()
+        result.name = "fan_compartment_builder"
+        return result
 
     def build_for_print(self):
         built = self.build()
@@ -335,8 +338,9 @@ class CentrifugeBuilder(PartBuilder):
         self.holder_thickness = holder_thickness
 
     def build(self):
-        scene = cq.Workplane("XY")
-        return self.build_fan_and_bottom().union(self.build_top())
+        result = self.build_fan_and_bottom().union(self.build_top())
+        result.name = "centrifuge_builder"
+        return result
 
     def build_for_print(self):
         return
