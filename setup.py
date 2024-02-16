@@ -1,7 +1,5 @@
 from setuptools import setup, find_packages
 
-with open('requirements.txt') as f:
-    required = f.read().splitlines()
 
 name = "cq_centrifugal_fan"
 desc = "Parametric centrifugal fan builder in CadQuery"
@@ -16,7 +14,6 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/farnasirim/cq-centrifugal-fan',
     packages=find_packages(exclude=('tests', 'scripts')),
-    install_requires=required,
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',

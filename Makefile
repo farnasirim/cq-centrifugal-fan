@@ -1,2 +1,2 @@
 push:
-	python -m build && python3 -m twine upload --skip-existing dist/*
+	python -m build && python3 -m twine upload --skip-existing --verbose dist/*
