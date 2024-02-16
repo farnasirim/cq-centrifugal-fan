@@ -1,11 +1,11 @@
 [project]
-name = "cq-centrifugal-fan"  # Required
+name = "cq-centrifugal-fan"
 
-description = "Fully parametric centrifugal fan builder in CadQuery"  # Optional
+description = "Fully parametric centrifugal fan builder in CadQuery"
 
 dynamic = ["dependencies", "optional-dependencies", "version"]
 
-readme = "README.md" # Optional
+readme = "README.md"
 
 requires-python = ">=3.7"
 
@@ -20,7 +20,7 @@ maintainers = [
   {name = "Mohammad Nasirifar", email = "farnasirim@gmail.com" }
 ]
 
-classifiers = [  # Optional
+classifiers = [
   "Development Status :: 3 - Alpha",
   
   "Intended Audience :: Developers",
@@ -35,7 +35,7 @@ classifiers = [  # Optional
   "Programming Language :: Python :: 3 :: Only",
 ]
 
-[project.urls]  # Optional
+[project.urls]
 "Homepage" = "https://github.com/farnasirim/cq-centrifugal-fan"
 "Bug Reports" = "https://github.com/farnasirim/cq-centrifugal-fan/issues"
 "Funding" = "https://farnasirim.com"
