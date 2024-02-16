@@ -1,0 +1,3 @@
+numpy
+cadquery>=2
+cqkit

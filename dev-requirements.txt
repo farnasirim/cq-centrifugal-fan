@@ -1,0 +1,2 @@
+ocp_vscode
+jupyter-cadquery
